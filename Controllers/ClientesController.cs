@@ -3,12 +3,14 @@ using Microsoft.AspNetCore.Mvc;
 using JusFacil.API.Data;
 using Microsoft.EntityFrameworkCore;
 using JusFacil.API.Models;
+using Microsoft.AspNetCore.Authorization;
 
 
 namespace JusFacil.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class ClientesController : ControllerBase
     {
         private readonly AppDbContext _context;
