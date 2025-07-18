@@ -8,6 +8,9 @@
         public string CaminhoArquivo { get; set; }
         public string TipoArquivo { get; set; }
         public DateTime DataUpload {  get; set; }
+        public int ProcessoId { get; set; }
+        public Processo Processo { get; set; }
+
 
         
 

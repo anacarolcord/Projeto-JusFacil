@@ -12,5 +12,9 @@
 
         public Cliente Cliente { get; set; }
         public Usuario Usuario { get; set; }
+        public List<Documento> Documentos { get; set; } = new List<Documento>();
+
+
+        
     }
 }

@@ -1,4 +1,5 @@
 ﻿using JusFacil.API.Data;
+using JusFacil.API.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
@@ -22,7 +23,7 @@ namespace JusFacil.API.Controllers
 
         [HttpPost("login")]//verificar se login ta fazendo referencia a algum atributo que nao existe
 
-        public IActionResult Login([FromBody] LoginRequest request)
+        public IActionResult Login([FromBody] JusFacil.API.Models.LoginRequest request)
         {
 
             var usuario = _context.Usuarios.FirstOrDefault(u => u.Email == request.Email && u.Senha == request.Senha);//aqui tbm entender
